@@ -100,7 +100,7 @@
 
   // Personal Info 2
   pad(
-    top: 0.25em,
+    // top: 0.25em,
     align(personal-info-position)[
       #{
         let items = (
