@@ -89,14 +89,25 @@
       #{
         let items = (
           contact-item(pronouns),
-          contact-item("hi"),
           contact-item(phone),
           contact-item(location),
+          contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
+        )
+        items.filter(x => x != none).join("  |  ")
+      }
+    ],
+  )
+
+  // Personal Info 2
+  pad(
+    top: 0.25em,
+    align(personal-info-position)[
+      #{
+        let items = (
           contact-item(email, link-type: "mailto:"),
           contact-item(github, link-type: "https://"),
           contact-item(linkedin, link-type: "https://"),
           contact-item(personal-site, link-type: "https://"),
-          contact-item(orcid, prefix: [#orcid-icon(color: rgb("#AECD54"))orcid.org/], link-type: "https://orcid.org/"),
         )
         items.filter(x => x != none).join("  |  ")
       }
